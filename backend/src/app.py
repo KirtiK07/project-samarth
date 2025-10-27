@@ -17,7 +17,7 @@ CORS(app)
 
 # Initialize components
 print("Initializing Samarth Q&A System...")
-data_loader = DataLoader(data_dir="../../data")
+data_loader = DataLoader(data_dir="../data")
 query_analyzer = QueryAnalyzer()
 query_processor = QueryProcessor(data_loader)
 answer_generator = AnswerGenerator()
