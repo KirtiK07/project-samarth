@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samarth - Agricultural & Climate Data Q&A</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <h1>🌾 Samarth</h1>
+                <p class="tagline">Intelligent Q&A System for Agricultural & Climate Data</p>
+            </div>
+            <div class="data-badge">
+                <span class="badge">Karnataka Crops</span>
+                <span class="badge">Tamil Nadu Rainfall</span>
+            </div>
+        </header>
+
+        <main>
+            <div class="query-section">
+                <div class="input-container">
+                    <textarea
+                        id="queryInput"
+                        placeholder="Ask me anything about crop production or rainfall data...
+Example: Which district has the highest crop production in Karnataka?"
+                        rows="3"
+                    ></textarea>
+                    <button id="submitBtn" class="submit-btn">
+                        <span class="btn-text">Ask Question</span>
+                        <span class="btn-loader" style="display: none;">⏳ Processing...</span>
+                    </button>
+                </div>
+
+                <div class="examples-section">
+                    <p class="examples-title">Try these examples:</p>
+                    <div class="examples-grid">
+                        <button class="example-btn" data-query="Compare rainfall in Chennai vs Coimbatore">
+                            📊 Compare rainfall in Chennai vs Coimbatore
+                        </button>
+                        <button class="example-btn" data-query="Which district has the highest crop production in Karnataka?">
+                            🏆 Highest crop production district
+                        </button>
+                        <button class="example-btn" data-query="Top 5 districts by rainfall in Tamil Nadu">
+                            ☔ Top 5 districts by rainfall
+                        </button>
+                        <button class="example-btn" data-query="Total crop production in Karnataka">
+                            📈 Total crop production statistics
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="results" class="results-section" style="display: none;">
+                <div class="answer-card">
+                    <h2>Answer</h2>
+                    <div id="answerText" class="answer-text"></div>
+                </div>
+
+                <div class="data-card">
+                    <h3>Data Sources</h3>
+                    <div id="sourcesContainer" class="sources-container"></div>
+                </div>
+
+                <details class="raw-data-section">
+                    <summary>View Raw Data</summary>
+                    <pre id="rawData" class="raw-data"></pre>
+                </details>
+            </div>
+
+            <div id="errorMessage" class="error-message" style="display: none;"></div>
+
+            <div id="loading" class="loading" style="display: none;">
+                <div class="loading-spinner"></div>
+                <p>Analyzing your question and retrieving data...</p>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <p>
+                    <strong>About Samarth:</strong> An AI-powered system that answers natural language questions
+                    about agricultural and climate data from government sources.
+                </p>
+                <p class="tech-stack">
+                    Built with Python • Flask • Pandas • Claude AI • HTML/CSS/JavaScript
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
