@@ -1,7 +1,7 @@
 // Configuration
 const API_BASE_URL = (window.location.hostname === 'localhost' || window.location.hostname === '' || window.location.protocol === 'file:')
     ? 'http://localhost:5000'
-    : 'YOUR_BACKEND_URL_HERE'; // Replace with your deployed backend URL
+    : 'https://project-samarth-7kzm.onrender.com'; // Deployed backend URL
 
 // DOM Elements
 const queryInput = document.getElementById('queryInput');
